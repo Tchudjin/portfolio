@@ -1,0 +1,602 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* En-tête */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  z-index: 1;
+}
+/* 
+  .header-title h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+      animation: slide-right 20s linear infinite;
+      -webkit-animation: slide-right 20s linear infinite;
+  }
+  
+  @keyframes slide-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    @keyframes slide-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    } */
+
+header h1 {
+  font-size: 32px;
+  margin: 0;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  float: right;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #26b4f0;
+}
+
+/*
+  
+  
+  /* À propos, expérience, formation, projets, compétences, contact */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.container h2 {
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Styles for the "A propos" section */
+
+#apropos {
+  padding-top: 80px;
+  /* background-color: gray; */
+  margin-top: 40px;
+}
+
+#apropos h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+#apropos p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#apropos .profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 2px;
+  margin-top: -20px;
+}
+
+#apropos .profile h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#apropos .profile p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Projets */
+#projets {
+  background-color: #f9f9f9;
+}
+
+.projets-liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.projet {
+  width: 30%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projet img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.projet h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projet p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.projet a {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.projet a:hover {
+  background-color: #666;
+}
+
+/* Styles for the "Expérience" section */
+
+#experience {
+  background-color: #f6f7fb;
+  padding: 60px 0;
+}
+
+.timeline {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  padding: 0;
+}
+
+.timeline-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  position: relative;
+}
+
+.timeline-year {
+  background-color: #0077ff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  height: 60px;
+  left: -30px;
+  line-height: 60px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 60px;
+}
+
+.timeline-year span {
+  display: block;
+}
+
+.timeline-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 30px;
+  margin-left: 80px;
+  position: relative;
+}
+
+.timeline-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.timeline-content ul {
+  font-size: 16px;
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+
+.timeline-content ul li {
+  margin-bottom: 10px;
+}
+.timeline-content:hover {
+  transform: translateX(-5px);
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.timeline-content::before {
+  background-color: #0077ff;
+  content: "";
+  height: 100%;
+  left: -30px;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.timeline-block:last-child .timeline-content::before {
+  height: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .timeline-year {
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    left: -25px;
+  }
+
+  .timeline-year span {
+    font-size: 16px;
+  }
+
+  .timeline-content {
+    margin-left: 60px;
+    padding: 20px;
+  }
+
+  .timeline-content h3 {
+    font-size: 20px;
+  }
+
+  .timeline-content p {
+    font-size: 16px;
+  }
+
+  .timeline-content ul {
+    font-size: 14px;
+  }
+}
+
+/* Styles for the "Formation" section */
+
+#formation {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
+#formation .formation-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#formation .formation-item {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: calc(50% - 20px);
+  transition: all 0.3s ease-in-out;
+}
+
+#formation .formation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#formation .formation-item:last-child {
+  margin-right: 0;
+}
+
+#formation .formation-details h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#formation .formation-details .formation-school {
+  flex-basis: 40%;
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
+#formation .formation-details .formation-year {
+  flex-basis: 20%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+#formation .formation-details .formation-country {
+  flex-basis: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Styles for the "Compétences" section */
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#competences {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+#competences h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.competence-item {
+  width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#competences .competence-item h3 {
+  flex-basis: 30%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* #competences .competence-item .bar {
+      flex-basis: 70%;
+      height: 20px;
+      background-color: #ddd;
+      position: relative;
+  } */
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.bar div {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* #competences .competence-item .bar .level {
+      height: 20px;
+      background-color: #6ab04c;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 20px;
+  } */
+
+/* Barres de compétence */
+
+.competence1 {
+  width: 80%;
+  background-color: #dc3545;
+}
+
+.competence2 {
+  width: 70%;
+  background-color: #007bff;
+}
+.competence3 {
+  width: 70%;
+  background-color: #ecf53d;
+}
+
+/* #competences .competence-item:nth-child(1) .bar .level {
+      width: 80%;
+  }
+  
+  #competences .competence-item:nth-child(2) .bar .level {
+      width: 70%;
+  }
+  
+  #competences .competence-item:nth-child(3) .bar .level {
+      width: 60%;
+  }
+  
+  #competences .competence-item:nth-child(4) .bar .level {
+      width: 50%;
+  } */
+
+/* Style pour le formulaire de contact */
+form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  margin-right: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+.fa-envelope {
+  margin-top: 3px;
+}
+
+.fa-linkedin-in {
+  margin-top: 2px;
+}
+
+/* Pied de page */
+footer {
+  background-color: #201f1f;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+@media only screen and (min-width: 767px) {
+  #apropos .profile .container1 {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    gap: 20px;
+  }
+  .container .profile img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}

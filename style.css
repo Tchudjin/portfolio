@@ -1,0 +1,712 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* En-tête */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #45a049;
+  /* color: #fff; */
+  z-index: 1;
+}
+nav ul li {
+  display: none;
+}
+#burger {
+  display: block;
+  font-size: 30px;
+  padding-left: 40px;
+}
+.header-title h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  animation: slide-right 20s linear infinite;
+  -webkit-animation: slide-right 20s linear infinite;
+}
+
+/* @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  } */
+.container h1 {
+  font-size: 30px;
+}
+
+nav {
+  display: flex;
+  float: right;
+  /* border: solid 3px black; */
+  /* margin-bottom: 20px; */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: #056608;
+}
+.container h1 {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+/* Lorsque survolé, le menu déroulant est affiché */
+
+.submenu {
+  display: none; /* Par défaut, le menu déroulant est caché */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 100%; /* Position en dessous du menu burger */
+  left: 300px; /* Positionnement à gauche */
+}
+
+.submenu li {
+  padding: 12px 16px;
+  display: block;
+}
+
+.submenu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Lorsque survolé, le menu déroulant est affiché */
+#burger:hover .submenu {
+  display: block;
+}
+
+/* À propos, expérience, formation, projets, compétences, contact */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+/* .container .profile img {
+  margin-right: 0;
+  margin-bottom: 20px;
+} */
+
+/* Styles for the "A propos" section */
+
+.container h2 {
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+#presentation p {
+  padding: 5px;
+}
+#apropos {
+  padding-top: 80px;
+  margin-top: -10px;
+  background-color: #007bff;
+}
+
+#apropos h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+#apropos p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+#apropos .profile {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.container .profile img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-top: -20px;
+}
+
+#apropos .profile h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#apropos #presentation p,
+nav ul li {
+  font-family: Georgia, serif;
+}
+#apropos .profile p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+#apropos button {
+  padding: 10px;
+  background-color: #dc356f;
+  font-weight: bold;
+  border: solid 2px;
+  border-radius: 10px;
+  float: inherit;
+  /* margin-top: 20px; */
+}
+#apropos button:hover {
+  cursor: pointer;
+  background-color: #45a07b;
+}
+/* Projets */
+#projets {
+  background-color: #f9f9f9;
+}
+#projets .container h2 {
+  padding-bottom: 20px;
+}
+.projets-liste {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.projet {
+  flex-basis: 100%;
+  width: 30%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.projet img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.projet h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.projet p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.projet a {
+  display: inline-block;
+  background-color: royalblue;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.projet a:hover {
+  background-color: #cf0808;
+}
+
+/* Styles for the "Expérience" section */
+
+#experience {
+  padding: 80px 0;
+  background-color: aquamarine;
+}
+.experience-item {
+  flex-wrap: wrap;
+}
+#experience h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px #333;
+}
+
+.experience-details {
+  margin-right: 300px;
+  justify-content: center;
+  /* display: inline-block; */
+  font-size: 2rem;
+  flex-wrap: nowrap;
+  padding-bottom: 30px;
+}
+
+.experience-details p {
+  white-space: pre;
+  box-sizing: content-box;
+  width: 100%;
+  font-size: 12px;
+
+  /* margin-bottom: 10px; */
+}
+.experience-year {
+  font-size: 2rem;
+  flex-basis: 100%;
+}
+.experience-year i {
+  margin-right: 10px;
+}
+#experience .experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border: solid 4px #333;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #333;
+  background-color: #fff;
+  padding: 20px;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* text-justify: auto; */
+}
+
+#experience .experience-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Ajout d'un dégradé de fond */
+/* #experience {
+    background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  } */
+
+/* Changement de la police */
+#experience h2,
+#experience .experience-item .experience-year,
+#experience .experience-item .experience-details h3,
+#experience .experience-item .experience-details p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Ajout d'une animation de transition pour l'élément au survol */
+#experience .experience-item:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Affichage du pseudo-élément au survol */
+#experience .experience-item:hover:before {
+  opacity: 0.5;
+  right: calc(100% + 10px);
+}
+
+/* Styles for the "Formation" section */
+
+#formation {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
+.formation-item {
+  flex-basis: 100%;
+}
+#formation .formation-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#formation .formation-item {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: calc(50% - 20px);
+  transition: all 0.3s ease-in-out;
+  border: 0.5px black;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+#formation .formation-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#formation .formation-details h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+#formation .formation-details .formation-school {
+  flex-basis: 40%;
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+#formation .formation-details .formation-year {
+  flex-basis: 20%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+#formation .formation-details .formation-country {
+  flex-basis: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Styles for the "Compétences" section */
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#competences {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+#competences h2 {
+  margin-bottom: 40px;
+}
+
+.competence-item {
+  width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#competences .competence-item h3 {
+  flex-basis: 30%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+/* #competences .competence-item .bar {
+    flex-basis: 70%;
+    height: 20px;
+    background-color: #ddd;
+    position: relative;
+  } */
+.bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.bar div {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* #competences .competence-item .bar .level {
+    height: 20px;
+    background-color: #6ab04c;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 20px;
+  } */
+
+/* Barres de compétence */
+
+.competence1 {
+  width: 90%;
+  background-color: #dc3545;
+}
+
+.competence2 {
+  width: 80%;
+  background-color: #007bff;
+}
+.competence3 {
+  width: 50%;
+  background-color: #ecf53d;
+}
+.competence4 {
+  width: 30%;
+  background-color: #f53daf;
+}
+/* .competence5 {
+  width: 70%;
+  background-color: #6e3df5;
+} */
+
+/* #competences .competence-item:nth-child(1) .bar .level {
+    width: 80%;
+  }
+  
+  #competences .competence-item:nth-child(2) .bar .level {
+    width: 70%;
+  }
+  
+  #competences .competence-item:nth-child(3) .bar .level {
+    width: 60%;
+  }
+  
+  #competences .competence-item:nth-child(4) .bar .level {
+    width: 50%;
+  }  */
+
+/* Style pour le formulaire de contact */
+form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+input::placeholder {
+  font-size: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: royalblue;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+form textarea {
+  resize: vertical;
+  height: 150px;
+}
+
+/* Pied de page */
+/* footer {
+    background-color: #201f1f;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  } */
+footer {
+  background-color: #808080;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  margin-right: 20px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #0077b5;
+}
+
+.fa-envelope {
+  margin-top: 3px;
+}
+
+.fa-linkedin-in {
+  margin-top: 2px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #apropos .container profile {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    /* gap: 20px; */
+  }
+  .container .profile img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  #apropos .profile {
+    flex-wrap: nowrap;
+  }
+  nav ul li {
+    display: block;
+  }
+
+  #burger {
+    display: none;
+  }
+
+  .container .profile img {
+    margin-top: 0px;
+  }
+  .projets-liste {
+    justify-content: space-between;
+  }
+
+  .projet {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  .formation-items {
+    gap: 150px;
+  }
+  .formation-item {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  .experience-item {
+    flex-wrap: nowrap;
+  }
+  /* .experience-item {
+    flex-direction: column;
+    align-items: flex-start;
+  } */
+  /* .experience-year {
+    flex-basis: auto;
+    max-width: none;
+    margin-bottom: 0;
+  } */
+  .experience-year {
+    flex-basis: calc(33.33% - 20px);
+    /* margin-bottom: 20px; */
+  }
+  .experience-details {
+    flex-basis: calc(100% - 150px);
+    /* flex-basis: calc(33.33% - 20px); */
+    
+  }
+
+  .experience-details p {
+    font-size: 16px;
+    width: 100%;
+  }
+}
