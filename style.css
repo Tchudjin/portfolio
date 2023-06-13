@@ -10,6 +10,7 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 img {
   width: 100%;
@@ -134,6 +135,7 @@ nav ul li a:hover {
 #apropos {
   padding-top: 80px;
   margin-top: 50px;
+  scroll-margin-top: 80px;
 }
 
 #apropos h2 {
@@ -210,6 +212,7 @@ nav ul li {
 #projets {
   margin-top: 50px;
   margin-bottom: 20px;
+  scroll-margin-top: 150px;
 }
 .projet {
   flex-basis: 100%;
@@ -257,8 +260,9 @@ nav ul li {
 /* Styles for the "Expérience" section */
 
 #experience {
-  padding: 50px 0;
+  padding: 50px;
   margin-top: 10px;
+  scroll-margin-top: 150px;
 }
 .experience-item {
   flex-wrap: wrap;
@@ -281,7 +285,7 @@ nav ul li {
 
 .experience-details p {
   box-sizing: content-box;
-  width: 300px;
+  width: 200px;
   font-size: 12px;
   margin: 10px;
 }
@@ -350,6 +354,9 @@ nav ul li {
 
 /* Styles for the "Formation" section */
 
+#formation {
+  scroll-margin-top: 150px;
+}
 .formation-item {
   flex-basis: 100%;
 }
@@ -425,6 +432,7 @@ nav ul li {
 #competences {
   padding: 80px 0;
   background-color: #f9f9f9;
+  scroll-margin-top: 150px;
 }
 
 #competences h2 {
@@ -468,20 +476,6 @@ nav ul li {
   border-radius: 10px;
 }
 
-/* #competences .competence-item .bar .level {
-    height: 20px;
-    background-color: #6ab04c;
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: right;
-    padding-right: 10px;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 20px;
-  } */
-
 /* Barres de compétence */
 
 .competence1 {
@@ -503,6 +497,9 @@ nav ul li {
 }
 
 /* Style pour le formulaire de contact */
+#contact {
+  scroll-margin-top: 150px;
+}
 form {
   background-color: #f2f2f2;
   border-radius: 5px;
