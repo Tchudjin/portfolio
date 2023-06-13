@@ -22,9 +22,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #45a049;
-  /* color: #fff; */
   z-index: 1;
+  background-color: lightblue;
+  padding-bottom: 30px;
 }
 nav ul li {
   display: none;
@@ -42,23 +42,6 @@ nav ul li {
   -webkit-animation: slide-right 20s linear infinite;
 }
 
-/* @keyframes slide-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-  
-  @keyframes slide-right {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  } */
 .container h1 {
   font-size: 30px;
 }
@@ -66,8 +49,6 @@ nav ul li {
 nav {
   display: flex;
   float: right;
-  /* border: solid 3px black; */
-  /* margin-bottom: 20px; */
 }
 
 nav ul {
@@ -80,7 +61,7 @@ nav ul li {
 }
 
 nav a {
-  color: black;
+  color: #0000ff;
   text-decoration: none;
   font-size: 20px;
   font-weight: 300;
@@ -105,11 +86,11 @@ nav ul li a:hover {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   top: 100%; /* Position en dessous du menu burger */
-  left: 300px; /* Positionnement à gauche */
+  left: 220px; /* Positionnement à gauche */
 }
 
 .submenu li {
-  padding: 12px 16px;
+  padding: 16px 12px;
   display: block;
 }
 
@@ -152,8 +133,7 @@ nav ul li a:hover {
 }
 #apropos {
   padding-top: 80px;
-  margin-top: -10px;
-  background-color: #007bff;
+  margin-top: 50px;
 }
 
 #apropos h2 {
@@ -204,11 +184,12 @@ nav ul li {
 }
 #apropos button {
   padding: 10px;
-  background-color: #dc356f;
+  background-color: rgb(53, 64, 220);
   font-weight: bold;
   border: solid 2px;
   border-radius: 10px;
   float: inherit;
+  color: #ffffff;
   /* margin-top: 20px; */
 }
 #apropos button:hover {
@@ -216,9 +197,7 @@ nav ul li {
   background-color: #45a07b;
 }
 /* Projets */
-#projets {
-  background-color: #f9f9f9;
-}
+
 #projets .container h2 {
   padding-bottom: 20px;
 }
@@ -228,11 +207,14 @@ nav ul li {
   justify-content: space-between;
   margin-top: 20px;
 }
-
+#projets {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
 .projet {
   flex-basis: 100%;
   width: 30%;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -275,8 +257,8 @@ nav ul li {
 /* Styles for the "Expérience" section */
 
 #experience {
-  padding: 80px 0;
-  background-color: aquamarine;
+  padding: 50px 0;
+  margin-top: 10px;
 }
 .experience-item {
   flex-wrap: wrap;
@@ -291,19 +273,20 @@ nav ul li {
 .experience-details {
   margin-right: 300px;
   justify-content: center;
-  /* display: inline-block; */
+  display: inline-block;
   font-size: 2rem;
   flex-wrap: nowrap;
   padding-bottom: 30px;
 }
 
 .experience-details p {
-  white-space: pre;
   box-sizing: content-box;
-  width: 100%;
+  width: 300px;
   font-size: 12px;
-
-  /* margin-bottom: 10px; */
+  margin: 10px;
+}
+.experience-details h3 {
+  margin-top: 10px;
 }
 .experience-year {
   font-size: 2rem;
@@ -366,11 +349,6 @@ nav ul li {
 }
 
 /* Styles for the "Formation" section */
-
-#formation {
-  background-color: #f5f5f5;
-  padding: 80px 0;
-}
 
 .formation-item {
   flex-basis: 100%;
@@ -507,12 +485,12 @@ nav ul li {
 /* Barres de compétence */
 
 .competence1 {
-  width: 90%;
+  width: 80%;
   background-color: #dc3545;
 }
 
 .competence2 {
-  width: 80%;
+  width: 75%;
   background-color: #007bff;
 }
 .competence3 {
@@ -523,26 +501,6 @@ nav ul li {
   width: 30%;
   background-color: #f53daf;
 }
-/* .competence5 {
-  width: 70%;
-  background-color: #6e3df5;
-} */
-
-/* #competences .competence-item:nth-child(1) .bar .level {
-    width: 80%;
-  }
-  
-  #competences .competence-item:nth-child(2) .bar .level {
-    width: 70%;
-  }
-  
-  #competences .competence-item:nth-child(3) .bar .level {
-    width: 60%;
-  }
-  
-  #competences .competence-item:nth-child(4) .bar .level {
-    width: 50%;
-  }  */
 
 /* Style pour le formulaire de contact */
 form {
@@ -596,13 +554,6 @@ form textarea {
   height: 150px;
 }
 
-/* Pied de page */
-/* footer {
-    background-color: #201f1f;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-  } */
 footer {
   background-color: #808080;
   color: #fff;
@@ -684,7 +635,7 @@ footer p {
   }
 
   .experience-item {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   /* .experience-item {
     flex-direction: column;
@@ -702,11 +653,11 @@ footer p {
   .experience-details {
     flex-basis: calc(100% - 150px);
     /* flex-basis: calc(33.33% - 20px); */
-    
   }
 
   .experience-details p {
     font-size: 16px;
     width: 100%;
+    flex-wrap: wrap;
   }
 }
