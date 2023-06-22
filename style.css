@@ -285,9 +285,10 @@ nav ul li {
 
 .experience-details p {
   box-sizing: content-box;
-  width: 200px;
+  width: 100%;
   font-size: 10px;
   margin: 10px;
+  word-wrap: break-word;
 }
 .experience-details h3 {
   margin-top: 10px;
@@ -301,6 +302,7 @@ nav ul li {
 }
 #experience .experience-item {
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   margin-bottom: 40px;
   border: solid 4px #333;
@@ -311,7 +313,6 @@ nav ul li {
   position: relative;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* text-justify: auto; */
 }
 
 #experience .experience-item:before {
