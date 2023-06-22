@@ -46,7 +46,9 @@ nav ul li {
 .container h1 {
   font-size: 30px;
 }
-
+.container h3 {
+  font-size: 20px;
+}
 nav {
   display: flex;
   float: right;
@@ -112,11 +114,6 @@ nav ul li a:hover {
   margin: 0 auto;
   padding: 20px 20px;
 }
-
-/* .container .profile img {
-  margin-right: 0;
-  margin-bottom: 20px;
-} */
 
 /* Styles for the "A propos" section */
 
@@ -191,8 +188,13 @@ nav ul li {
   border: solid 2px;
   border-radius: 10px;
   float: inherit;
+  font-size: 15px;
   color: #ffffff;
-  /* margin-top: 20px; */
+  -webkit-border-radius: 10px 20px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 #apropos button:hover {
   cursor: pointer;
@@ -212,7 +214,7 @@ nav ul li {
 #projets {
   margin-top: 50px;
   margin-bottom: 20px;
-  scroll-margin-top: 150px;
+  scroll-margin-top: 200px;
 }
 .projet {
   flex-basis: 100%;
@@ -276,7 +278,7 @@ nav ul li {
 
 .experience-details {
   margin-right: 300px;
-  justify-content: center;
+  justify-content: justify;
   display: inline-block;
   font-size: 2rem;
   flex-wrap: nowrap;
@@ -350,7 +352,7 @@ nav ul li {
 /* Styles for the "Formation" section */
 
 #formation {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 190px;
 }
 .formation-item {
   flex-basis: 100%;
@@ -452,12 +454,6 @@ nav ul li {
   font-size: 1.2em;
 }
 
-/* #competences .competence-item .bar {
-    flex-basis: 70%;
-    height: 20px;
-    background-color: #ddd;
-    position: relative;
-  } */
 .bar {
   width: 100%;
   height: 20px;
@@ -493,7 +489,7 @@ nav ul li {
 
 /* Style pour le formulaire de contact */
 #contact {
-  scroll-margin-top: 150px;
+  scroll-margin-top: 200px;
 }
 form {
   background-color: #f2f2f2;
@@ -590,8 +586,6 @@ footer p {
   #apropos .container profile {
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
-    /* gap: 20px; */
   }
   .container .profile img {
     margin-right: 0;
@@ -629,27 +623,18 @@ footer p {
   .experience-item {
     flex-wrap: wrap;
   }
-  /* .experience-item {
-    flex-direction: column;
-    align-items: flex-start;
-  } */
-  /* .experience-year {
-    flex-basis: auto;
-    max-width: none;
-    margin-bottom: 0;
-  } */
+
   .experience-year {
     flex-basis: calc(33.33% - 20px);
-    /* margin-bottom: 20px; */
   }
   .experience-details {
     flex-basis: calc(100% - 150px);
-    /* flex-basis: calc(33.33% - 20px); */
   }
 
   .experience-details p {
     font-size: 16px;
     width: 100%;
     flex-wrap: wrap;
+    text-align: justify;
   }
 }
