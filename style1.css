@@ -221,6 +221,18 @@ nav ul li a:hover {
   padding: 0;
 }
 
+/* .profile #image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 1px;
+  margin-top: -20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+} */
 .timeline-block {
   display: flex;
   justify-content: space-between;
