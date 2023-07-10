@@ -1,22 +1,22 @@
 <?php
-if(isset($_POST['email'])) {
+ini_set('SMTP', 'localhost');
+ini_set('smtp_port', 1025);
 
-    // variables pour le message
-    $nom = $_POST['nom'];
-    $email = $_POST['email'];
-    $sujet = "Nouveau message de formulaire de contact";
-    $message = $_POST['message'];
+// Destinataire et expéditeur
+$to = 'tgentianeleslie@gmail.com';
+$from = 'expediteur@.com';
+$subject = 'Test d\'email en PHP';
+$message = 'Ceci est un test d\'email en PHP.';
 
-    // headers pour l'e-mail
-    $headers = "From: $nom <$email> \r\n";
-    $headers .= "Reply-To: $email \r\n";
-    $headers .= "Content-type: text/plain; charset=utf-8 \r\n";
+// Créer l'en-tête de l'e-mail
+$headers = "From: $from\r\n";
+$headers .= "Reply-To: $from\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    // envoi de l'e-mail
-    $to = "tgentianeleslie@gmail.com"; // remplacer par votre adresse e-mail
-    mail($to, $sujet, $message, $headers);
-
-    // message de confirmation
-    echo "Merci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.";
+// Envoyer l'e-mail
+if (mail($to, $subject, $message, $headers)) {
+    echo 'Email envoyé avec succès.';
+} else {
+    echo 'Erreur lors de l\'envoi de l\'email.';
 }
-?>
