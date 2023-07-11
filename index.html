@@ -285,7 +285,12 @@
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <form action="envoyer_email.php" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="c73122ef-21af-496b-9f4c-085cbca3c93c"
+          />
           <div class="form-group">
             <label for="name">Nom</label>
             <input
